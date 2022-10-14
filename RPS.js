@@ -1,39 +1,40 @@
 function getComputerChoice()
 {
-    let options = ["Rock", "Paper", "Scissors"];
+    let options = ["rock", "paper", "scissors"];
     let choice = options[Math.floor(Math.random()*options.length)];
-    // console.log(choice);
+     console.log(choice);
     
 }
+let playerSelection = prompt("Please enter Rock, Paper, or Scissors: ");
 
 function playRound(playerSelection, computerSelection)
 {
     
-    if (playerSelection.toLowerCase() === computerSelection.toLowerCase())
+    if (playerSelection.toLowerCase() === computerSelection)
     {
-        window.alert("It's a tie!");   
+        alert("It's a tie!");  
     }
 
-    else if (playerSelection.toLowerCase() ==="rock" && computerSelection.toLowerCase()==="scissors")
+    else if (playerSelection.toLowerCase() ==="rock" && computerSelection ==="scissors")
     {
-         window.alert("You win!");   
+         alert("You win!");
     }
 
-    else if (playerSelection.toLowerCase() ==="paper" && computerSelection.toLowerCase()==="rock")
+    else if (playerSelection.toLowerCase() ==="paper" && computerSelection ==="rock")
     {
-         window.alert("You win!");   
+         alert("You win!");    
     }
 
-    else if (playerSelection.toLowerCase() ==="scissors" && computerSelection.toLowerCase()==="paper")
+    else if (playerSelection.toLowerCase() ==="scissors" && computerSelection ==="paper")
     {
-         window.alert("You win!");     
+         alert("You win!");     
     }
 
     else
     {
-       window.alert("You lose!");
+       alert("You lose!");
     }
 }
-let playerSelection = prompt("Please enter Rock, Paper, or Scissors: ");
+
 const computerSelection = getComputerChoice();
 playRound(playerSelection, computerSelection);
