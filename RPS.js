@@ -2,11 +2,11 @@ function getComputerChoice()
 {
     let options = ["rock", "paper", "scissors"];
     let choice = options[Math.floor(Math.random()*options.length)];
-       console.log(choice);
+     //   console.log(choice);
       return choice;
     
 }
-let playerSelection = prompt("Please enter Rock, Paper, or Scissors: ");
+// let playerSelection = prompt("Please enter Rock, Paper, or Scissors: ");
 
 function playRound(playerSelection, computerSelection)
 {
@@ -51,6 +51,17 @@ function playRound(playerSelection, computerSelection)
        alert("Huh? Only enter rock, paper, or scissors.");
     }
 }
+
+function game()
+{
+    for (let i = 0; i < 5; i++) 
+    {
+     let playerSelection = prompt("Please enter Rock, Paper, or Scissors: ");
+     let computerSelection = getComputerChoice();
+      playRound(playerSelection, computerSelection);
+    }
+
+}
+// game();
 //  let playerSelection = "rock";
-let computerSelection = getComputerChoice();
- playRound(playerSelection, computerSelection);
+
